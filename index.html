@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yamicomid2.o - Delicias a un Clic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado / Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>yamicomid<span>2.o</span></h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#menu">Menú</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="cart-btn-container">
+            <button id="cart-toggle-btn" class="cart-btn">
+                🛒 Carrito (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>¡Tu comida favorita, rapidísimo!</h2>
+            <p>Las mejores hamburguesas, pizzas, bebidas y postres directo a tu mesa.</p>
+            <a href="#menu" class="btn-primary">Ver Menú</a>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        <!-- Filtros de Categorías -->
+        <section id="menu" class="menu-section">
+            <h2 class="section-title">Nuestro Menú</h2>
+            <div class="categories-filter">
+                <button class="btn-filter active" data-category="todos">Todos</button>
+                <button class="btn-filter" data-category="hamburguesas">Hamburguesas</button>
+                <button class="btn-filter" data-category="pizzas">Pizzas</button>
+                <button class="btn-filter" data-category="bebidas">Bebidas</button>
+                <button class="btn-filter" data-category="postres">Postres</button>
+            </div>
+
+            <!-- Grilla de Productos -->
+            <div id="products-grid" class="products-grid">
+                <!-- Se cargan dinámicamente con JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Sidebar / Modal del Carrito -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Pedido</h3>
+            <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Los items agregados aparecen aquí -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <p>Subtotal: <span id="subtotal-price">$0.00</span></p>
+                <p>Envío: <span id="shipping-price">$2.00</span></p>
+                <p class="total">Total: <span id="total-price">$0.00</span></p>
+            </div>
+            <button id="checkout-btn" class="btn-checkout">Finalizar Pedido</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
